@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -51,6 +52,15 @@ fun GreetingPreview() {
 fun LazyColumnExample() {
     LazyColumn {
         items(10) { index ->
+            Text("Item #$index")
+        }
+    }
+}
+
+@Composable
+fun LazyRowExample() {
+    LazyRow {
+        items(20) { index ->
             Text("Item #$index")
         }
     }
