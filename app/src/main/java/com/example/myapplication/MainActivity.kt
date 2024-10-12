@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -62,6 +64,16 @@ fun LazyRowExample() {
     LazyRow {
         items(20) { index ->
             Text("Item #$index")
+        }
+    }
+}
+@Composable
+fun GridExample() {
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(3)
+    ) {
+        items(9) { index ->
+            Text(text = "Item #$index")
         }
     }
 }
